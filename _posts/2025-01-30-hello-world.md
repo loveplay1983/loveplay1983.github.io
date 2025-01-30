@@ -7,3 +7,10 @@ tags: [Hello World]
 
 # Hello World
 Hello, this is my personal blog in terms of academic and learning event records.
+
+# Project topics 
+- Data Science
+- Computer Science
+- Phisolophy
+- Healthcare
+- Sociocyberneering

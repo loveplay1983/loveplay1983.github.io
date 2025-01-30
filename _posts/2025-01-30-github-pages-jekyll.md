@@ -45,5 +45,6 @@ For more detailed information on customizing the Chirpy theme, refer to the offi
 
 
 # References
-- [Javasript](https://www.w3schools.com/w3js/default.asp)
-- [Jekyll Template](https://github.com/cotes2020)
+- [Javasript-w3js](https://www.w3schools.com/w3js/default.asp)
+- [Chirpy-template](https://github.com/cotes2020)
+- [Jekyll-complete-tutorial](https://jekyllrb.com/docs/step-by-step/10-deployment/)
