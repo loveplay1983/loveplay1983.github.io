@@ -40,3 +40,10 @@ The directory structure of a Jekyll site using the Chirpy theme is organized to 
 To customize the site's appearance, modify the `jekyll-theme-chirpy.scss` file located in the `assets/css/` directory. This file imports various Sass partials from the `_sass/` directory, including `_variables.scss`, `_mixins.scss`, and others, which define the site's styles. By overriding variables or adding custom styles in this file, the site's appearance can be tailored without directly modifying the theme's core files. ([chirpy.cotes.page](https://chirpy.cotes.page/posts/getting-started/?utm_source=chatgpt.com))
 
 For more detailed information on customizing the Chirpy theme, refer to the official documentation. ([chirpy.cotes.page](https://chirpy.cotes.page/posts/getting-started/?utm_source=chatgpt.com)) 
+
+
+
+
+# References
+- [Javasript](https://www.w3schools.com/w3js/default.asp)
+- [Jekyll Template](https://github.com/cotes2020)
