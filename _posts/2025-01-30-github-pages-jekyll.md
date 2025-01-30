@@ -1,3 +1,23 @@
+---
+title: "GitHub pages by Jekyll"
+date: 2025-01-30 21:57:00 +0800
+categories: [Computer Science]
+tags: [Utils]
+---
+
+# 1. Jekyll installation
+```shell
+sudo apt-get install ruby-full build-essential zlib1g-dev
+
+echo '# Install Ruby Gems to ~/gems' >> ~/.bashrc
+echo 'export GEM_HOME="$HOME/gems"' >> ~/.bashrc
+echo 'export PATH="$HOME/gems/bin:$PATH"' >> ~/.bashrc
+source ~/.bashrc
+
+gem install jekyll bundler
+```
+
+# 2. Jekyll project structure
 The directory structure of a Jekyll site using the Chirpy theme is organized to facilitate efficient content management and customization. Here's an overview of the key directories and their purposes:
 
 - **`assets/`**: Contains static assets such as stylesheets, JavaScript files, and images.
@@ -20,6 +40,3 @@ The directory structure of a Jekyll site using the Chirpy theme is organized to 
 To customize the site's appearance, modify the `jekyll-theme-chirpy.scss` file located in the `assets/css/` directory. This file imports various Sass partials from the `_sass/` directory, including `_variables.scss`, `_mixins.scss`, and others, which define the site's styles. By overriding variables or adding custom styles in this file, the site's appearance can be tailored without directly modifying the theme's core files. ([chirpy.cotes.page](https://chirpy.cotes.page/posts/getting-started/?utm_source=chatgpt.com))
 
 For more detailed information on customizing the Chirpy theme, refer to the official documentation. ([chirpy.cotes.page](https://chirpy.cotes.page/posts/getting-started/?utm_source=chatgpt.com)) 
-
-
-
