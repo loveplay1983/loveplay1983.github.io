@@ -1,0 +1,22 @@
+The directory structure of a Jekyll site using the Chirpy theme is organized to facilitate efficient content management and customization. Here's an overview of the key directories and their purposes:
+
+- **`assets/`**: Contains static assets such as stylesheets, JavaScript files, and images.
+  - **`css/`**: Holds the main stylesheet (`jekyll-theme-chirpy.scss`) that defines the site's appearance.
+  - **`img/`**: Stores images, including favicons and other site graphics.
+  - **`js/`**: Contains JavaScript files, including libraries and custom scripts.
+
+- **`_config.yml`**: The main configuration file for the Jekyll site, where global settings are defined.
+- **`_data/`**: Holds YAML files for structured data, such as `contact.yml` and `share.yml`, which can be accessed throughout the site.
+- **`Gemfile` and `Gemfile.lock`**: Manage Ruby gem dependencies for the Jekyll site.
+- **`_includes/`**: Contains partial templates (e.g., headers, footers) that can be included in other templates or pages.
+- **`_layouts/`**: Holds layout templates that define the structure of different types of pages (e.g., posts, pages).
+- **`_posts/`**: Contains blog posts in Markdown format, following the naming convention `YEAR-MONTH-DAY-title.md`.
+- **`README.md`**: Provides information about the Jekyll site and instructions for setup and customization.
+- **`_sass/`**: Contains Sass partials that are compiled into CSS, allowing for modular and maintainable styles.
+- **`_site/`**: The output directory where the generated static site is placed after building.
+- **`_tabs/`**: Holds Markdown files for navigation tabs, such as "About," "Archives," "Categories," and "Tags."
+- **`tools/`**: Contains utility scripts, such as `run.sh` and `test.sh`, for building and testing the site.
+
+To customize the site's appearance, modify the `jekyll-theme-chirpy.scss` file located in the `assets/css/` directory. This file imports various Sass partials from the `_sass/` directory, including `_variables.scss`, `_mixins.scss`, and others, which define the site's styles. By overriding variables or adding custom styles in this file, the site's appearance can be tailored without directly modifying the theme's core files. ([chirpy.cotes.page](https://chirpy.cotes.page/posts/getting-started/?utm_source=chatgpt.com))
+
+For more detailed information on customizing the Chirpy theme, refer to the official documentation. ([chirpy.cotes.page](https://chirpy.cotes.page/posts/getting-started/?utm_source=chatgpt.com)) 
