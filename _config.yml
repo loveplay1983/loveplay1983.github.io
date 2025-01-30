@@ -14,9 +14,9 @@ timezone:
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Chirpy # the main title
+title: 信雄湊のブログ # the main title
 
-tagline: A text-focused Jekyll theme # it will display as the subtitle
+tagline: 研究とイベントの記録 # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
   A minimal, responsive and feature-rich Jekyll theme for technical writing.
@@ -26,10 +26,16 @@ description: >- # used by seo meta and the atom feed
 url: "https://loveplay1983.github.io"
 
 github:
-  username: github_username # change to your GitHub username
+  username: loveplay1983 # change to your GitHub username
 
-twitter:
-  username: twitter_username # change to your Twitter username
+# twitter:
+#  username: twitter_username # change to your Twitter username
+
+facebook:
+  username: xuan.xiongming # change to your Facebook username
+
+linkedin:
+  username: xiong-min-xuan-758103134 # change to your Instagram username
 
 social:
   # Change to your full name.
@@ -38,11 +44,11 @@ social:
   email: example@domain.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://twitter.com/username # change to your Twitter homepage
+    # - https://twitter.com/username # change to your Twitter homepage
     - https://github.com/username # change to your GitHub homepage
     # Uncomment below to add more social links
-    # - https://www.facebook.com/username
-    # - https://www.linkedin.com/in/username
+    - https://www.facebook.com/username
+    - https://www.linkedin.com/in/username
 
 # Site Verification Settings
 webmaster_verifications:
@@ -98,7 +104,7 @@ theme_mode: # [light | dark]
 cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar:
+avatar: ./assets/img/site-imgs/xuan.jpeg 
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
