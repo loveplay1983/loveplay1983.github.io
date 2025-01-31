@@ -23,7 +23,6 @@ The directory structure of a Jekyll site using the Chirpy theme is organized to 
 - **`assets/`**: Contains static assets such as stylesheets, JavaScript files, and images.
   - **`css/`**: Holds the main stylesheet (`jekyll-theme-chirpy.scss`) that defines the site's appearance.
   - **`img/`**: Stores images, including favicons and other site graphics.
-  - **`js/`**: Contains JavaScript files, including libraries and custom scripts.
 
 - **`_config.yml`**: The main configuration file for the Jekyll site, where global settings are defined.
 - **`_data/`**: Holds YAML files for structured data, such as `contact.yml` and `share.yml`, which can be accessed throughout the site.
