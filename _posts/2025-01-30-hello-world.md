@@ -24,3 +24,4 @@ Hello, this is my personal blog in terms of academic and learning event records.
 - [How to build your Blog for free on GitHub Pages using Jekyll (Walkthrough)](https://www.youtube.com/watch?v=m1RYsmOMPLs)
 - [Front-matter-CMS](https://frontmatter.codes/)
 - [LaTeX-math](https://www.overleaf.com/learn/latex/Mathematical_expressions)
+- [Pauls'-online-notes](https://tutorial.math.lamar.edu/)
