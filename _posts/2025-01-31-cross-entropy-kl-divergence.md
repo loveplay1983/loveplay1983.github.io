@@ -43,13 +43,13 @@ $$H(P, Q) = - ∑_i P(i) log [Q(i)]$$
 
 where P and Q are probability distributions over the same set of events, and P(i) and Q(i) are the probabilities of the ith event in the distributions.
 
-Let's break down the formula:
+Let's break down the formula:  
 
--   $$H(P, Q)$$: This is the cross entropy between P and Q, which measures how different Q is from P.
+-  $$H(P,Q)$$: This is the cross entropy between P and Q, which measures how different Q is from P.
     
--   $$-∑_i$$: This is the summation operator, which means that we are summing over all events i in the distributions.
+-  $$-∑_i$$: This is the summation operator, which means that we are summing over all events i in the distributions.
     
--   $$P(i)$$: This is the probability of the ith event in the true distribution P.
+-  $$P(i)$$: This is the probability of the ith event in the true distribution P.
 
 -  $$Q(i)$$: This represents the predicted probability distribution of the ith event. In classification problems, Q(i) is often the output of the softmax function, which converts the logits (raw outputs of the model) into a probability distribution.
     
@@ -133,14 +133,14 @@ The **entropy** formula quantifies the amount of uncertainty or randomness in a 
 
 ### **1. Entropy Definition**
 
-For a discrete random variable $X$ with possible outcomes $x_1, x_2, \dots, x_n$ and a probability mass function $P(X = x_i) = p_i$, the entropy $H(X)$ is defined as:
+For a discrete random variable $X$ with possible outcomes $$x_1, x_2, \dots, x_n$$ and a probability mass function $$P(X = x_i) = p_i$$, the entropy $$H(X)$$ is defined as:
 
 $$H(X) = -\sum_{i=1}^{n} p_i \log p_i$$
 
 #### **Explanation of Symbols:**
-- $$H(X)$$: The entropy of the random variable $X$.
-- $$p_i$$: The probability of the $i$-th outcome ($0 \leq p_i \leq 1$).
-- $$\log$$: The logarithm function (base 2 is common in information theory, while base $e$ is used in other contexts like physics).
+- $$H(X)$$: The entropy of the random variable $$X$$.
+- $$p_i$$: The probability of the $$i$$-th outcome ($$0 \leq p_i \leq 1$$).
+- $$\log$$: The logarithm function (base 2 is common in information theory, while base $$e$$ is used in other contexts like physics).
 
 ---
 
@@ -272,7 +272,7 @@ In information theory, the logarithmic function ensures that entropy reflects th
 ### **6. Base of the Logarithm**
 The choice of the logarithm base depends on the context:
 - **Base 2** ($$\log_2$$): Used in information theory; measures information in bits.
-- **Base $e$** ($$\ln$$): Common in mathematics and physics; results in information measured in nats.
+- **Base e** ($$\ln$$): Common in mathematics and physics; results in information measured in nats.
 - **Base 10** ($$\log_{10}$$): Sometimes used for interpretability in real-world applications.
 
 Regardless of the base, the properties of the logarithm (proportionality, additivity, and exponential scaling) hold.
