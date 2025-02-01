@@ -7,12 +7,12 @@ mathjax: true
 ---
 
 
-# 1.  KL divergence vs Cross Entropy
+## 1. Definitions  
 
-KL divergence: 
+**KL divergence**: 
 $$KL(P || Q) = ∑_i P(i) log \bigg[\frac{P(i)}{Q(i)}\bigg]$$
 
-Cross entropy: 
+**Cross entropy**: 
 $$H(P, Q) = - ∑_i P(i) log [Q(i)]$$
 
 The relationship between KL divergence and cross entropy can be expressed as:
@@ -26,7 +26,7 @@ Where H(P, Q) is the cross entropy between distributions P and Q, and H(P) is th
 So, while both KL divergence and cross entropy measure the difference between probability distributions, they have different interpretations and applications, with KL divergence being used more generally and cross entropy being used in the specific context of classification.
 
 
-# 2. Cross Entropy
+**What is Cross Entropy?**
 
 Cross entropy is a measure of how different two probability distributions are. In the context of machine learning and classification, it is often used to measure the difference between a true probability distribution and a predicted probability distribution.
 
@@ -63,7 +63,7 @@ The intuition behind this formula is that the cross entropy between P and Q is a
 In machine learning, cross entropy is often used as a loss function for training classifiers. The goal is to minimize the cross entropy between the true probability distribution (i.e., the ground truth labels) and the predicted probability distribution output by the model. This is done by adjusting the model's parameters during training to improve its accuracy in predicting the correct labels.
 
 
-# 3. KL divergence
+**What is KL divergence?**
 
 KL divergence, also known as Kullback-Leibler divergence, is a measure of how different two probability distributions are. In the context of machine learning, it is often used to measure the difference between a predicted probability distribution and a true probability distribution.
 
@@ -90,13 +90,14 @@ In machine learning, KL divergence is often used as a loss function during train
 
 One common application of KL divergence in machine learning is in the training of generative models, such as variational autoencoders (VAEs). In this context, the KL divergence is used to measure the difference between the learned latent space distribution and a prior distribution, such as a Gaussian distribution. By minimizing the KL divergence, the generative model can learn to generate samples that are similar to those in the training data, while also ensuring that the learned latent space has desirable properties, such as smoothness and continuity.
 
+___
 
-# [Why Cross Entropy is Negative](https://www.theochem.ru.nl/~pwormer/Knowino/knowino.org/wiki/Logarithm.html#:~:text=Thus%2C%20for%20any%20base%20b,seen%20in%20the%20image%20below).
 
-> For any base _b_ > 1 logarithms of numbers between 0 and 1 are negative numbers, the logarithm of 1 is 0, and logarithms of numbers greater than 1 are positive real numbers as seen in the image below.
+[Why Cross Entropy is Negative](https://www.theochem.ru.nl/~pwormer/Knowino/knowino.org/wiki/Logarithm.html#:~:text=Thus%2C%20for%20any%20base%20b,seen%20in%20the%20image%20below).
 
 ![](https://www.theochem.ru.nl/~pwormer/Knowino/knowino.org/w/images/5/50/Logarithms2.png)
 
+> For any base _b_ > 1 logarithms of numbers between 0 and 1 are negative numbers, the logarithm of 1 is 0, and logarithms of numbers greater than 1 are positive real numbers as seen in the image below.
 
 $$H(P, Q) = - ∑_i P(i) log [Q(i)]$$
 
@@ -125,50 +126,48 @@ It's worth noting that when the true distribution `p(x)` is a one-hot encoded la
 In summary, cross-entropy loss is a specific form of KL divergence, where the true distribution is a one-hot encoded label. In knowledge distillation, KL divergence is used to compare the soft targets and the student model's predictions, allowing the student model to learn from the more refined information provided by the teacher model.
 
 
-# Entropy explained
+## 2. Entropy explained
 
 The **entropy** formula quantifies the amount of uncertainty or randomness in a probability distribution. It is a foundational concept in information theory introduced by Claude Shannon.
 
 ---
 
-### **1. Entropy Definition**
-
 For a discrete random variable $X$ with possible outcomes $$x_1, x_2, \dots, x_n$$ and a probability mass function $$P(X = x_i) = p_i$$, the entropy $$H(X)$$ is defined as:
 
-$$H(X) = -\sum_{i=1}^{n} p_i \log p_i$$
+$$H(X) = -\sum_{i=1}^{n} p_i \log p_i,$$  
 
-#### **Explanation of Symbols:**
+where 
 - $$H(X)$$: The entropy of the random variable $$X$$.
 - $$p_i$$: The probability of the $$i$$-th outcome ($$0 \leq p_i \leq 1$$).
 - $$\log$$: The logarithm function (base 2 is common in information theory, while base $$e$$ is used in other contexts like physics).
 
 ---
 
-### **2. Key Properties**
-1. **Non-Negativity**:
+**Key Properties**
+* **Non-Negativity**:
    - $$H(X) \geq 0$$. Entropy is always non-negative.
    - $$H(X) = 0$$ if and only if one outcome has a probability of $1$ (no uncertainty).
 
-2. **Maximum Entropy**:
+* **Maximum Entropy**:
    - Entropy is maximized when all outcomes are equally likely ($$p_i = \frac{1}{n}$$):
      $$H_{\text{max}} = \log n$$
 
-3. **Unit of Measurement**:
+* **Unit of Measurement**:
    - If the logarithm is base $$2$$, entropy is measured in **bits**.
    - If the logarithm is base $$e$$, entropy is measured in **nats**.
 
 ---
 
-### **3. Entropy for Continuous Random Variables**
+## 3. Entropy for Continuous Random Variables**
 
-For a continuous random variable $X$ with probability density function $f(x)$, the **differential entropy** is given by:
+For a continuous random variable $X$ with probability density function $$f(x)$$, the **differential entropy** is given by:
 
 $$H(X) = -\int f(x) \log f(x) \, dx$$
 
 ---
 
-### **4. Example Calculations**
-#### **Case 1: A Fair Coin**
+## 4. Example Calculations
+**Case 1: A Fair Coin**
 A fair coin has two outcomes ($n = 2$) with equal probabilities $$p_1 = p_2 = 0.5$$. Entropy is:
 
 $$H(X) = -\sum_{i=1}^{2} p_i \log_2 p_i = -\left(0.5 \log_2 0.5 + 0.5 \log_2 0.5\right)$$
@@ -178,7 +177,7 @@ $$H(X) = -\left(0.5 \times -1 + 0.5 \times -1\right) = 1 \, \text{bit}$$
 
 ---
 
-#### **Case 2: A Biased Coin**
+**Case 2: A Biased Coin**
 A biased coin with $$p(\text{Heads}) = 0.8$$ and $$p(\text{Tails}) = 0.2$$:
 
 $$H(X) = -\left(0.8 \log_2 0.8 + 0.2 \log_2 0.2\right)$$
@@ -189,33 +188,33 @@ $$H(X) \approx -\left(0.8 \times -0.3219 + 0.2 \times -2.3219\right) \approx 0.7
 
 ---
 
-### **5. Applications of Entropy**
-1. **Information Theory**:
+## 5. Applications of Entropy
+* **Information Theory**:
    - Measures the uncertainty in a source.
    - Basis for concepts like mutual information and Kullback-Leibler divergence.
 
-2. **Data Compression**:
+* **Data Compression**:
    - Entropy sets a theoretical limit for lossless data compression.
 
-3. **Machine Learning**:
+* **Machine Learning**:
    - Used in loss functions like cross-entropy.
    - Helps quantify uncertainty in probability distributions (e.g., predictive models).
 
-4. **Physics and Thermodynamics**:
+* **Physics and Thermodynamics**:
    - Measures disorder or randomness in systems.
 
 
-# 6. Why do we use logarithm in the computation of entropy?
+## 6. Why do we use logarithm in the computation of entropy?
 
 The use of the **logarithm** in measuring information content and defining entropy has deep theoretical and practical justifications. Here’s why the logarithmic function is specifically chosen:
 
 ---
 
-### **1. Logarithm Captures the Nature of Information**
+* **Logarithm Captures the Nature of Information**
 
 The information content (or "surprise") of an event is inversely proportional to its probability. The less likely an event is, the more surprising it is when it occurs. The logarithmic function satisfies this property in a way that aligns with our intuitive and mathematical understanding:
 
-#### **Proportionality to Inverse Probability**
+* **Proportionality to Inverse Probability**
 - For an event with probability $$p_i$$, the information content is $$-\log(p_i)$$. This grows as $$p_i$$ becomes smaller.
   - Example:
     - If $$p = 0.1$$, $$-\log(0.1) \approx 2.3$$.
@@ -224,11 +223,11 @@ The information content (or "surprise") of an event is inversely proportional to
 
 ---
 
-### **2. Logarithms Make Information Additive**
+* **Logarithms Make Information Additive**
 
 One of the most compelling reasons for using logarithms is their property of **additivity**. This is critical when dealing with independent events.
 
-#### Additivity Example:
+**Additivity Example**:
 - Suppose we observe two independent events $$A$$ and $$B$$, with probabilities $$p_A$$ and $$p_B$$. The combined probability is $$p_A \cdot p_B$$.
 - The total information content of both events is:
   $$I(A, B) = -\log(p_A \cdot p_B) = -\log(p_A) - \log(p_B)$$
@@ -238,10 +237,10 @@ Without logarithms, we would lose this convenient property.
 
 ---
 
-### **3. Exponential Growth of Surprise**
+* **Exponential Growth of Surprise**
 Logarithms provide a natural way to represent the **exponential nature** of probability changes in terms of information content.
 
-#### Example:
+**Example**:
 If an event becomes 10x less likely:
 - The surprise increases by an additive constant:
   $$I = -\log(p) \quad \text{and if } p' = \frac{p}{10}, \quad I' = -\log(p') = -\log(p) + \log(10)$$
@@ -250,7 +249,7 @@ This aligns with intuition: Rare events (smaller probabilities) contribute dispr
 
 ---
 
-### **4. Logarithms Align with Human Perception**
+* **Logarithms Align with Human Perception**
 
 Humans perceive many phenomena on a logarithmic scale:
 - **Sound intensity**: Measured in decibels (logarithmic scale).
@@ -261,7 +260,7 @@ The logarithmic relationship aligns well with our perception of surprise or info
 
 ---
 
-### **5. Optimal Encoding in Information Theory**
+* **Optimal Encoding in Information Theory**
 
 In information theory, the logarithmic function ensures that entropy reflects the optimal length of encoding data:
 - The average number of bits required to encode an event optimally is proportional to $$-\log(p_i)$$.
@@ -269,7 +268,7 @@ In information theory, the logarithmic function ensures that entropy reflects th
 
 ---
 
-### **6. Base of the Logarithm**
+* **Base of the Logarithm**
 The choice of the logarithm base depends on the context:
 - **Base 2** ($$\log_2$$): Used in information theory; measures information in bits.
 - **Base e** ($$\ln$$): Common in mathematics and physics; results in information measured in nats.
@@ -279,7 +278,7 @@ Regardless of the base, the properties of the logarithm (proportionality, additi
 
 ---
 
-### **7. Alternative Functions?**
+* **Alternative Functions?**
 Why not use a different function (e.g., linear or polynomial)?
 
 - A linear function (e.g., $$-p_i$$) doesn’t capture the exponential growth of surprise for rare events.
@@ -292,11 +291,11 @@ Logarithms are the **unique function** that satisfies all the requirements for m
 
 ---
 
-### **Summary**
+## 7. Summary
 Logarithms are used in entropy and information content because they:
-1. Capture the intuitive relationship between probability and surprise.
-2. Provide additivity for independent events.
-3. Reflect the exponential growth of surprise as probability decreases.
-4. Align with human perception and optimal encoding in information theory.
+- Capture the intuitive relationship between probability and surprise.
+- Provide additivity for independent events.
+- Reflect the exponential growth of surprise as probability decreases.
+- Align with human perception and optimal encoding in information theory.
 
 
