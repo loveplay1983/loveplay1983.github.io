@@ -4,3 +4,8 @@
 * Phisolophy
 * Healthcare
 * Sociocyberneering
+
+
+
+# Note
+* [LaTeX math](https://www.overleaf.com/learn/latex/Mathematical_expressions)
