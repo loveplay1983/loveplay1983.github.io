@@ -82,5 +82,9 @@ layout: compress
     {% endfor %}
 
     {% include_cached search-loader.html lang=lang %}
+    <script type="module">
+      import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+      mermaid.initialize({ startOnLoad: true });
+    </script>
   </body>
 </html>

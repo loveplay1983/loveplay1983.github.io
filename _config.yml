@@ -230,5 +230,7 @@ jekyll-archives:
   permalinks:
     tag: /tags/:name/
     category: /categories/:name/
-# plugins:
+plugins:
 #   - jekyll-embed-video
+  - jekyll-mermaid
+
