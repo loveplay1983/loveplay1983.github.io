@@ -1,5 +1,5 @@
 ---
-title: "DeepSeek local deployment test"
+title: "Insert mermaid diagram in jekyll site"
 date: 2025-02-20 22:01:00 +0800
 categories: [Computer Science]
 tags: [Utils]
