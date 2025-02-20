@@ -500,15 +500,16 @@ python app.py
 http://localhost:5000
 ```
 ### H. About database
-**Using SQLite for simplicity and test purpose**
-**`sqlite3`**                            ->  Command-line interface (CLI)              
-**`libsqlite3-dev`**               ->  Development files (headers for compiling)
+**Using SQLite for simplicity and test purpose**   
+**`sqlite3`**                            ->  Command-line interface (CLI)                 
+**`libsqlite3-dev`**               ->  Development files (headers for compiling)   
+
 ```bash
 sudo apt update
 sudo apt install sqlite3 libsqlite3-dev
 sqlite3 --version
 
-# test 
+# Test 
 sqlite3 test.db
 .databases
 CREATE TABLE users (id INTEGER PRIMARY KEY, name TEXT);
@@ -523,6 +524,7 @@ cursor.execute('SELECT sqlite_version()')
 print(cursor.fetchone()[0])  # Should print version (e.g., 3.37.2)
 conn.close()
 ```
+
 ### I. Ollama and Flask integration 
 * Using Ollama python library
 ```python
